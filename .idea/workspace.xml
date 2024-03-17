@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="77cc0e4c-47f1-4184-a5d6-ad6e8ca3ad33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/connected/ConnectedVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/connected/ConnectedVerification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/infrastructure/authentication/AuthenticationIntraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/infrastructure/authentication/AuthenticationIntraService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/service/authentication/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/service/authentication/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/domain/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/domain/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/domain/validation/EmailValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/domain/validation/EmailValidation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -43,23 +45,25 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Api.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.ApiJerseyTemplate [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Api.executor": "Run",
+    "JUnit.AccountTest.executor": "Coverage",
+    "JUnit.All Tests.executor": "Coverage",
+    "Maven.ApiJerseyTemplate [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="fr.kap35.api.jersey.service.repository.exception" />
@@ -71,7 +75,7 @@
       <recent name="fr.kap35.api.jersey.api.dto.input" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All Tests">
     <configuration name="Api" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.kap35.api.jersey.Api" />
       <module name="ApiJerseyTemplate" />
@@ -85,8 +89,113 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ApiJerseyTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.AccountTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Tests" type="JUnit" factoryName="JUnit">
+      <module name="ApiJerseyTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.infrastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E2E Tests" type="JUnit" factoryName="JUnit">
+      <module name="ApiJerseyTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="resource" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Integration Tests" type="JUnit" factoryName="JUnit">
+      <module name="ApiJerseyTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.infrastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unit Tests" type="JUnit" factoryName="JUnit">
+      <module name="ApiJerseyTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.kap35.api.jersey.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Api" />
+      <item itemvalue="JUnit.Unit Tests" />
+      <item itemvalue="JUnit.E2E Tests" />
+      <item itemvalue="JUnit.Integration Tests" />
+      <item itemvalue="JUnit.All Tests" />
+      <item itemvalue="JUnit.AccountTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="Application.Api" />
       </list>
     </recent_temporary>
@@ -111,11 +220,22 @@
       <workItem from="1710544744226" duration="1033000" />
       <workItem from="1710616986462" duration="3768000" />
       <workItem from="1710676556427" duration="2255000" />
-      <workItem from="1710691163514" duration="3326000" />
+      <workItem from="1710691163514" duration="5423000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ApiJerseyTemplate$All_Tests.ic" NAME="All Tests Coverage Results" MODIFIED="1710696524358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>fr.kap35.api.jersey.api.*</FILTER>
+      <FILTER>fr.kap35.api.jersey.domain.*</FILTER>
+      <FILTER>fr.kap35.api.jersey.infrastructure.*</FILTER>
+      <FILTER>fr.kap35.api.jersey.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ApiJerseyTemplate$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1710696270863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
   </component>
 </project>

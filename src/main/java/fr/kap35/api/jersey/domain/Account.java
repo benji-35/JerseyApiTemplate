@@ -37,9 +37,12 @@ public class Account {
     }
 
     private void validate(String email, char[] password, String username, String name) throws AccountValidationException {
+        if (username == null)
+            throw new AccountValidationException("username", "cannot be null");
+        if (name == null)
+            throw new AccountValidationException("name", "cannot be null");
         AccountValidation validation = new EmailValidation(email)
                 .addNextValidation(new PasswordValidation(password));
-
         validation.run();
     }
     private String hashPassword(char[] password) {
