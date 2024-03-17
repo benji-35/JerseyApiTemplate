@@ -2,6 +2,8 @@ package fr.kap35.api.jersey.infrastructure.authentication;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import fr.kap35.api.jersey.domain.Account;
 import fr.kap35.api.jersey.domain.validation.exception.AccountValidationException;
@@ -55,7 +57,7 @@ public class AuthenticationIntraService implements AuthenticationService {
     }
 
     @Override
-    public Account getAccountByToken(String token) throws AccountNotFoundException {
+    public Account getAccountByToken(String token) throws AccountNotFoundException, JWTVerificationException {
         Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
         DecodedJWT decodedJWT = JWT.require(algorithm)
                 .build()

@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77cc0e4c-47f1-4184-a5d6-ad6e8ca3ad33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/rate/RateLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/rate/RateLimitFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/rate/RateLimitResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/infrastructure/rate/RateLimitIntraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/service/rate/RateLimitService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/connected/ConnectedVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/annotation/connected/ConnectedVerification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/resource/AuthenticationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/api/resource/AuthenticationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/infrastructure/authentication/AuthenticationIntraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/infrastructure/authentication/AuthenticationIntraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/service/authentication/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/kap35/api/jersey/service/authentication/AuthenticationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +111,7 @@
       <workItem from="1710544744226" duration="1033000" />
       <workItem from="1710616986462" duration="3768000" />
       <workItem from="1710676556427" duration="2255000" />
-      <workItem from="1710691163514" duration="3062000" />
+      <workItem from="1710691163514" duration="3326000" />
     </task>
     <servers />
   </component>

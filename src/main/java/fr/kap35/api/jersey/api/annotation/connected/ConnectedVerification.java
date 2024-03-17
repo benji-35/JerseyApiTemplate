@@ -1,5 +1,7 @@
 package fr.kap35.api.jersey.api.annotation.connected;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import fr.kap35.api.jersey.api.dto.output.ErrorDto;
 import fr.kap35.api.jersey.domain.Account;
 import fr.kap35.api.jersey.service.ServiceLocator;
@@ -62,7 +64,7 @@ public class ConnectedVerification implements ContainerRequestFilter {
                     .status(Response.Status.SERVICE_UNAVAILABLE)
                     .build());
             return;
-        } catch (AccountNotFoundException e) {
+        } catch (AccountNotFoundException | JWTVerificationException e) {
             requestContext.abortWith(Response
                     .status(connectedAnnotation.returned())
                     .build());
