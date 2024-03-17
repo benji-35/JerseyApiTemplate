@@ -12,11 +12,13 @@ import jakarta.ws.rs.container.ContainerRequestFilter;
 import jakarta.ws.rs.container.ResourceInfo;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.ext.Provider;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.List;
 
+@Provider
 public class ConnectedVerification implements ContainerRequestFilter {
 
     private static final String PREFIX_TOKEN = "Bearer ";

@@ -1,12 +1,16 @@
 package fr.kap35.api.jersey;
 
 import fr.kap35.api.jersey.api.annotation.connected.ConnectedVerification;
+import fr.kap35.api.jersey.api.annotation.rate.RateLimitFilter;
+import fr.kap35.api.jersey.api.annotation.rate.RateLimitResponse;
 import fr.kap35.api.jersey.api.exception.ExceptionMapper;
 import fr.kap35.api.jersey.api.resource.AuthenticationResource;
 import fr.kap35.api.jersey.infrastructure.authentication.AuthenticationIntraService;
+import fr.kap35.api.jersey.infrastructure.rate.RateLimitIntraService;
 import fr.kap35.api.jersey.infrastructure.repository.AccountRepositoryInMemory;
 import fr.kap35.api.jersey.service.ServiceLocator;
 import fr.kap35.api.jersey.service.authentication.AuthenticationService;
+import fr.kap35.api.jersey.service.rate.RateLimitService;
 import fr.kap35.api.jersey.service.repository.AccountRepository;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
@@ -38,9 +42,11 @@ public class Api {
 
     private static ResourceConfig initResources() {
         return new ResourceConfig()
+                .register(RateLimitFilter.class)
                 .register(ConnectedVerification.class)
                 .register(ValidationFeature.class)
-                .register(AuthenticationResource.class);
+                .register(AuthenticationResource.class)
+                .register(RateLimitResponse.class);
     }
 
     public static String CURRENT_URL() {
@@ -52,5 +58,6 @@ public class Api {
         AccountRepository repository = new AccountRepositoryInMemory();
 
         serviceLocator.register(AuthenticationService.class, new AuthenticationIntraService(repository));
+        serviceLocator.register(RateLimitService.class, new RateLimitIntraService());
     }
 }

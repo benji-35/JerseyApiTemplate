@@ -1,6 +1,7 @@
 package fr.kap35.api.jersey.api.resource;
 
 import fr.kap35.api.jersey.api.annotation.connected.Connected;
+import fr.kap35.api.jersey.api.annotation.rate.RateLimit;
 import fr.kap35.api.jersey.api.assembler.AccountAssembler;
 import fr.kap35.api.jersey.api.dto.input.LoginDto;
 import fr.kap35.api.jersey.api.dto.input.RegisterDto;
@@ -25,6 +26,7 @@ import jakarta.ws.rs.core.Response;
 @Path("/api/auth")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@RateLimit
 public class AuthenticationResource {
 
     @Path("/register")
