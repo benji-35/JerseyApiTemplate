@@ -98,7 +98,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>fr.kap35.api.jersey</mainClass>
+                    <mainClass>fr.kap35.api.jersey.Api</mainClass>
                 </configuration>
             </plugin>
             <plugin>
